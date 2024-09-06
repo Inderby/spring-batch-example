@@ -1,0 +1,13 @@
+spring:
+  batch:
+    job:
+      name: ${job.name:NONE}
+      enabled: true
+    jdbc:
+      initialize-schema: always
+  datasource:
+    driver-class-name: org.h2.Driver
+  data:
+  sql:
+    init:
+      data-locations: classpath:person.sql
